@@ -1,17 +1,17 @@
-# Sustainability-analytics-report
+# Campus Utility Consumption & Sustainability Analysis
 
 ## Project Overview
 
 This project was developed for **The College of Wooster** using utility and facilities data provided by the college. The goal was to turn detailed operational records into clear, useful visualizations that explain energy consumption, compare building efficiency, and identify opportunities for more sustainable campus operations.
 
-The work involved **cleaning and organizing Excel data**, preparing consistent time periods and calculation fields, checking values against source records, and developing Tableau visualizations for electricity and water consumption. The analyses provide an accessible overview of campus resource usage and practical areas for further investigation.
+The work involved **cleaning and organizing Excel data**, preparing consistent time periods and calculation fields, checking values against source records, and developing Tableau visualizations for electricity, water, and student-normalized utility use. The analyses provide an accessible overview of campus resource usage and practical areas for further investigation.
 
 The campus electricity and water analyses cover **2023–2025**.
 
 ## Project Approach
 
 - **Data preparation:** Cleaned and reorganized the supplied Excel records, standardized time categories, and prepared datasets for analysis in Tableau.
-- **Data transformation:** Developed monthly and annual comparisons for campus electricity and water consumption.
+- **Data transformation:** Developed monthly and annual comparisons, semester-level usage-per-student measures for campus utilities.
 - **Visualization design:** Used time-series charts and bar charts to communicate trends, comparisons, and outliers.
 - **Validation:** Cross-checked selected values and trends displayed in Tableau against the underlying Excel records, refining labels, filters, and annotations for clarity.
 - **Communication:** Summarized findings and recommendations relevant to the college's sustainability goals.
@@ -48,6 +48,24 @@ Annual water consumption declined to **20,539,100 gallons in 2025**, compared wi
 
 ---
 
+### 2. Utility Usage per Student — https://public.tableau.com/app/profile/atabek.rysbekov/viz/UtilityUsagePerStudent/WaterUsagePerStudent
+
+These charts normalize campus-wide consumption by student enrollment to support comparisons across semesters with different student populations. **They should not be interpreted as individual students' actual metered usage.**
+
+#### Electric Usage per Student
+
+![Electricity usage per student by semester](figures/electricity-usage-per-student.png)
+
+The calculated electricity usage per student fluctuates across semesters but increases from **3,309 kWh in Fall 2023** to **4,249 kWh in Fall 2025**. This adds context to changes in total electricity consumption.
+
+#### Water Usage per Student
+
+![Water usage per student by semester](figures/water-usage-per-student.png)
+
+Water usage per student varies across semesters, from **4,524 gallons in Spring 2025** to **5,711 gallons in Fall 2025** in the displayed period. The changes show why both total demand and enrollment-adjusted measures are helpful when interpreting utility trends.
+
+---
+
 ## Key Findings
 
 - **Electricity:** Total annual consumption increased modestly over the three-year period, with a recurring September peak.
@@ -57,10 +75,11 @@ Annual water consumption declined to **20,539,100 gallons in 2025**, compared wi
 
 The analysis points to potential opportunities in **continued monitoring of water and electricity trends**. Useful next steps would include relating utility usage to outdoor temperature, operational schedules, and actual campus occupancy.
 
-The findings are descriptive rather than causal. Weather and facility characteristics were not fully controlled for.
+The findings are descriptive rather than causal. Student-normalized values are based on campus-wide totals, and weather and facility characteristics were not fully controlled for.
 
 ## Data Source and Tools
 
-- **Data source:** Campus utility records supplied by **The College of Wooster** for this project.
+- **Data source:** Campus utilities and student enrollment records supplied by **The College of Wooster** for this project.
 - **Tools:** Microsoft Excel for data cleaning and preparation; Tableau for calculations and chart development.
 - **Data availability:** Standalone original and processed college datasets are not included in this repository. The packaged Tableau workbooks may contain embedded source data; redistribution requires the college's applicable permission. This repository contains visualization images and links to the corresponding Tableau Public views.
+
