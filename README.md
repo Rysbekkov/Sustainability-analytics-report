@@ -7,11 +7,18 @@ This project was developed for **The College of Wooster** using utility and faci
 The work involved **cleaning and organizing Excel data**, preparing consistent time periods and calculation fields, checking values against source records, and developing Tableau visualizations for electricity, water, student-normalized utility use, and student housing efficiency. The analyses provide an accessible overview of campus resource usage and practical areas for further investigation.
 
 The campus electricity and water analyses cover **2023–2025**. The student housing efficiency comparison focuses on **2025**.
+=======
+The work involved **cleaning and organizing Excel data**, preparing consistent time periods and calculation fields, checking values against source records, and developing Tableau visualizations for electricity, water, student-normalized utility use, student housing efficiency, and solar energy production. The analyses provide an accessible overview of campus resource usage and practical areas for further investigation.
+
+The campus electricity and water analyses cover **2023–2025**. The student housing efficiency comparison focuses on **2025**. The Scot Center solar analysis covers **2021–2024**.
+
 
 ## Project Approach
 
 - **Data preparation:** Cleaned and reorganized the supplied Excel records, standardized time categories, and prepared datasets for analysis in Tableau.
 - **Data transformation:** Developed monthly and annual comparisons, semester-level usage-per-student measures, and building-level electricity efficiency metrics.
+=======
+- **Data transformation:** Developed monthly and annual comparisons, semester-level usage-per-student measures, and building-level electricity efficiency metrics. Evaluated solar generation and estimated its monetary value using an assumed electricity rate.
 - **Visualization design:** Used time-series charts and bar charts to communicate trends, comparisons, and outliers.
 - **Validation:** Cross-checked selected values and trends displayed in Tableau against the underlying Excel records, refining labels, filters, and annotations for clarity.
 - **Communication:** Summarized findings and recommendations relevant to the college's sustainability goals.
@@ -76,6 +83,25 @@ This comparison ranks the electricity-use efficiency measure for student houses 
 
 ---
 
+=======
+### 4. Campus Solar Energy Analysis — https://public.tableau.com/app/profile/atabek.rysbekov/viz/CampusSolarEnergyAnalysis/SolarProductionMonth
+
+This workbook explores the Scot Center solar array's electricity production and the *estimated* monetary value of that output across **2021–2024**.
+
+#### Solar Production by Month
+
+![Monthly Scot Center solar energy production](figures/solar-production-monthly.png)
+
+Solar production follows a clear seasonal pattern, with the strongest output generally occurring from **May through July** and much lower production in **December and January**.
+
+#### Estimated Monetary Value of Solar Production by Month
+
+![Estimated monthly value of solar electricity production](figures/solar-monetary-value-monthly.png)
+
+The visualization translates solar generation into an illustrative financial value using an **assumed rate of $0.13 per kWh**. Some high-output months approach **$4,000 in estimated value**. These figures are modeled offsets, **not verified electricity-bill savings**.
+
+---
+
 ## Key Findings
 
 - **Electricity:** Total annual consumption increased modestly over the three-year period, with a recurring September peak.
@@ -91,5 +117,18 @@ The findings are descriptive rather than causal. Student-normalized values are b
 ## Data Source and Tools
 
 - **Data source:** Campus utilities, student enrollment, and facilities records supplied by **The College of Wooster** for this project.
+=======
+- **Solar energy:** Production is concentrated in sunnier months, creating seasonal opportunities to offset purchased electricity.
+
+## Recommendations and Limitations
+
+The analysis points to potential opportunities in **building-level electricity audits** and **continued monitoring of water and electricity trends**. Useful next steps would include relating utility usage to outdoor temperature, building size and condition, operational schedules, and actual campus occupancy, while assessing solar generation against verified electricity costs.
+
+The findings are descriptive rather than causal. Student-normalized values are based on campus-wide totals, building-level data may be incomplete, and weather and facility characteristics were not fully controlled for. Solar financial estimates use a fixed assumed electricity price rather than the college's verified billing rate.
+
+## Data Source and Tools
+
+- **Data source:** Campus utilities, student enrollment, facilities, and solar-production records supplied by **The College of Wooster** for this project.
 - **Tools:** Microsoft Excel for data cleaning and preparation; Tableau for calculations and chart development.
 - **Data availability:** Standalone original and processed college datasets are not included in this repository. The packaged Tableau workbooks may contain embedded source data; redistribution requires the college's applicable permission. This repository contains visualization images and links to the corresponding Tableau Public views.
+
