@@ -1,25 +1,18 @@
-# Sustainability Analysis Report
+# Campus Utility Consumption & Sustainability Analysis
 
 ## Project Overview
 
 This project was developed for **The College of Wooster** using utility and facilities data provided by the college. The goal was to turn detailed operational records into clear, useful visualizations that explain energy consumption, compare building efficiency, and identify opportunities for more sustainable campus operations.
 
-The work involved **cleaning and organizing Excel data**, preparing consistent time periods and calculation fields, checking values against source records, and developing Tableau visualizations for electricity, water, student-normalized utility use, and student housing efficiency. The analyses provide an accessible overview of campus resource usage and practical areas for further investigation.
-
-The campus electricity and water analyses cover **2023–2025**. The student housing efficiency comparison focuses on **2025**.
-=======
 The work involved **cleaning and organizing Excel data**, preparing consistent time periods and calculation fields, checking values against source records, and developing Tableau visualizations for electricity, water, student-normalized utility use, student housing efficiency, and solar energy production. The analyses provide an accessible overview of campus resource usage and practical areas for further investigation.
 
 The campus electricity and water analyses cover **2023–2025**. The student housing efficiency comparison focuses on **2025**. The Scot Center solar analysis covers **2021–2024**.
 
-
 ## Project Approach
 
 - **Data preparation:** Cleaned and reorganized the supplied Excel records, standardized time categories, and prepared datasets for analysis in Tableau.
-- **Data transformation:** Developed monthly and annual comparisons, semester-level usage-per-student measures, and building-level electricity efficiency metrics.
-=======
 - **Data transformation:** Developed monthly and annual comparisons, semester-level usage-per-student measures, and building-level electricity efficiency metrics. Evaluated solar generation and estimated its monetary value using an assumed electricity rate.
-- **Visualization design:** Used time-series charts and bar charts to communicate trends, comparisons, and outliers.
+- **Visualization design:** Used time-series charts and bar charts, and a heatmap to communicate trends, comparisons, and outliers.
 - **Validation:** Cross-checked selected values and trends displayed in Tableau against the underlying Excel records, refining labels, filters, and annotations for clarity.
 - **Communication:** Summarized findings and recommendations relevant to the college's sustainability goals.
 
@@ -83,7 +76,6 @@ This comparison ranks the electricity-use efficiency measure for student houses 
 
 ---
 
-=======
 ### 4. Campus Solar Energy Analysis — https://public.tableau.com/app/profile/atabek.rysbekov/viz/CampusSolarEnergyAnalysis/SolarProductionMonth
 
 This workbook explores the Scot Center solar array's electricity production and the *estimated* monetary value of that output across **2021–2024**.
@@ -102,22 +94,21 @@ The visualization translates solar generation into an illustrative financial val
 
 ---
 
+### 5. Monthly Housing Electricity Efficiency — https://public.tableau.com/app/profile/atabek.rysbekov/viz/MonthlyHousingElectricityEfficiency/HouseEfficiencyMonthly
+
+#### House Efficiency by Month
+
+![Heatmap of monthly electricity-use efficiency across student houses](figures/housing-efficiency-monthly.png)
+
+The heatmap compares monthly electricity-use intensity across student houses. Darker cells represent **higher values of the project's calculated efficiency measure**. Houses such as **Corner House and Avery House** frequently show comparatively high values, suggesting that more detailed energy audits could help identify possible efficiency improvements.
+
+---
+
 ## Key Findings
 
 - **Electricity:** Total annual consumption increased modestly over the three-year period, with a recurring September peak.
 - **Water:** Annual consumption was lower in 2025 than in 2023 or 2024.
 - **Student housing:** Electricity-use intensity varies considerably by building, making targeted investigation more useful than treating all residences as equally efficient.
-
-## Recommendations and Limitations
-
-The analysis points to potential opportunities in **building-level electricity audits** and **continued monitoring of water and electricity trends**. Useful next steps would include relating utility usage to outdoor temperature, building size and condition, operational schedules, and actual campus occupancy.
-
-The findings are descriptive rather than causal. Student-normalized values are based on campus-wide totals, building-level data may be incomplete, and weather and facility characteristics were not fully controlled for.
-
-## Data Source and Tools
-
-- **Data source:** Campus utilities, student enrollment, and facilities records supplied by **The College of Wooster** for this project.
-=======
 - **Solar energy:** Production is concentrated in sunnier months, creating seasonal opportunities to offset purchased electricity.
 
 ## Recommendations and Limitations
