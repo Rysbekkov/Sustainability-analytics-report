@@ -131,4 +131,3 @@ The findings are descriptive rather than causal. Student-normalized values are b
 - **Data source:** Campus utilities, student enrollment, facilities, and solar-production records supplied by **The College of Wooster** for this project.
 - **Tools:** Microsoft Excel for data cleaning and preparation; Tableau for calculations and chart development.
 - **Data availability:** Standalone original and processed college datasets are not included in this repository. The packaged Tableau workbooks may contain embedded source data; redistribution requires the college's applicable permission. This repository contains visualization images and links to the corresponding Tableau Public views.
-
