@@ -4,17 +4,49 @@
 
 This project was developed for **The College of Wooster** using utility and facilities data provided by the college. The goal was to turn detailed operational records into clear, useful visualizations that explain energy consumption, compare building efficiency, and identify opportunities for more sustainable campus operations.
 
-The work involved **cleaning and organizing Excel data**, preparing consistent time periods and calculation fields, checking values against source records, and developing Tableau visualizations for electricity, water, student-normalized utility use, student housing efficiency, and solar energy production. The analyses provide an accessible overview of campus resource usage and practical areas for further investigation.
+The work involved **cleaning and organizing Excel data**, preparing consistent time periods and calculation fields, checking values against source records, and developing Tableau visualizations for electricity, natural gas, water, student-normalized utility use, student housing efficiency, and solar energy production. The exploratory analyses supported a **final interactive Tableau dashboard focused on campus natural gas consumption**. Together, the visualizations and findings provide an accessible overview of campus resource usage and practical areas for further investigation.
 
-The campus electricity and water analyses cover **2023–2025**. The student housing efficiency comparison focuses on **2025**. The Scot Center solar analysis covers **2021–2024**.
+The campus utility analyses primarily cover **2023–2026**; the student housing efficiency comparison focuses on **2025**, while the Scot Center solar analysis covers **2021–2024**.
 
 ## Project Approach
 
 - **Data preparation:** Cleaned and reorganized the supplied Excel records, standardized time categories, and prepared datasets for analysis in Tableau.
-- **Data transformation:** Developed monthly and annual comparisons, semester-level usage-per-student measures, and building-level electricity efficiency metrics. Evaluated solar generation and estimated its monetary value using an assumed electricity rate.
-- **Visualization design:** Used time-series charts and bar charts, and a heatmap to communicate trends, comparisons, and outliers.
+- **Data transformation:** Developed monthly and annual comparisons, semester-level usage-per-student measures, and building-level electricity efficiency metrics. Kept fiscal-year analysis distinct from calendar-year analysis.
+- **Visualization design:** Used time-series charts, bar charts, and a heatmap to communicate trends, comparisons, and outliers.
 - **Validation:** Cross-checked selected values and trends displayed in Tableau against the underlying Excel records, refining labels, filters, and annotations for clarity.
 - **Communication:** Summarized findings and recommendations relevant to the college's sustainability goals.
+
+## Final Interactive Dashboard
+
+### Campus Gas Consumption Dashboard — https://public.tableau.com/app/profile/atabek.rysbekov/viz/CampusGasConsumptionDashboard/Dashboard
+
+![Interactive dashboard showing monthly, annual, and per-student campus gas usage](figures/campus-gas-dashboard.png)
+
+The final dashboard brings together three perspectives on campus natural gas consumption: **monthly usage (MCF)**, **annual totals by fiscal year**, and **usage per student by semester**. It is designed to show both the strong seasonal cycle in heating-related gas demand and the extent to which overall usage changes across fiscal years.
+
+**How to use the dashboard:** Use the **Fiscal Year** control to focus on a particular year and the **Month** dropdown to narrow the period being viewed. Hover over chart marks to inspect values. The monthly time series follows the college's fiscal-year sequence (**June–May**), while the lower charts add annual and student-normalized context.
+
+**Main insight:** Gas consumption is highest in the colder months and substantially lower in summer. Annual gas use remained fairly similar across FY 2023–FY 2025, suggesting that seasonal heating demand is a stronger visible pattern than a consistent year-to-year decline.
+
+#### Gas Usage per Month
+
+![Gas usage by fiscal-year month](figures/gas-usage-monthly.png)
+
+Gas usage rises sharply from autumn into winter, with the highest plotted monthly value reaching **23,136 MCF in January of FY 2025**. The comparison across three fiscal years emphasizes the recurring seasonal demand.
+
+#### Gas Usage per Year
+
+![Annual gas usage by fiscal year](figures/gas-usage-annual.png)
+
+Annual gas consumption stayed relatively stable: **127,446 MCF in FY 2023**, **125,811 MCF in FY 2024**, and **129,434 MCF in FY 2025**. Despite fluctuations during individual months, there was no sustained decrease over the period.
+
+#### Gas Usage per Student
+
+![Gas usage per student by semester](figures/gas-usage-per-student.png)
+
+The semester-level measure fluctuates substantially, with higher values in spring semesters. It provides an enrollment-adjusted comparison, but it does **not** represent direct gas metering for individual students; campus-wide gas consumption also supports buildings and operations beyond student residences.
+
+---
 
 ## Supporting Tableau Analyses
 
@@ -106,6 +138,7 @@ The heatmap compares monthly electricity-use intensity across student houses. Da
 
 ## Key Findings
 
+- **Natural gas:** Demand rises substantially in the winter, while annual consumption remained relatively stable from FY 2023 to FY 2025.
 - **Electricity:** Total annual consumption increased modestly over the three-year period, with a recurring September peak.
 - **Water:** Annual consumption was lower in 2025 than in 2023 or 2024.
 - **Student housing:** Electricity-use intensity varies considerably by building, making targeted investigation more useful than treating all residences as equally efficient.
@@ -113,12 +146,12 @@ The heatmap compares monthly electricity-use intensity across student houses. Da
 
 ## Recommendations and Limitations
 
-The analysis points to potential opportunities in **building-level electricity audits** and **continued monitoring of water and electricity trends**. Useful next steps would include relating utility usage to outdoor temperature, building size and condition, operational schedules, and actual campus occupancy, while assessing solar generation against verified electricity costs.
+The analysis points to potential opportunities in **winter heating efficiency**, **building-level electricity audits**, and **continued monitoring of water and electricity trends**. Useful next steps would include relating utility usage to outdoor temperature, building size and condition, operational schedules, and actual campus occupancy.
 
 The findings are descriptive rather than causal. Student-normalized values are based on campus-wide totals, building-level data may be incomplete, and weather and facility characteristics were not fully controlled for. Solar financial estimates use a fixed assumed electricity price rather than the college's verified billing rate.
 
 ## Data Source and Tools
 
 - **Data source:** Campus utilities, student enrollment, facilities, and solar-production records supplied by **The College of Wooster** for this project.
-- **Tools:** Microsoft Excel for data cleaning and preparation; Tableau for calculations and chart development.
-- **Data availability:** Standalone original and processed college datasets are not included in this repository. The packaged Tableau workbooks may contain embedded source data; redistribution requires the college's applicable permission. This repository contains visualization images and links to the corresponding Tableau Public views.
+- **Tools:** Microsoft Excel for data cleaning and preparation; Tableau for calculations, charts, and interactive dashboard development.
+- **Data availability:** The original and processed college datasets are **not included** in this repository. Redistribution requires the college's applicable permission. This repository contains visualization images and links to the corresponding Tableau Public views.
